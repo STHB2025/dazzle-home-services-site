@@ -179,7 +179,8 @@ h3 {
   color: var(--muted);
 }
 
-.hero-actions {
+.hero-actions,
+.contact-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -380,13 +381,11 @@ h3 {
   background: var(--blue-100);
 }
 
-/* Text is visible by default if JavaScript fails. */
 .reveal {
   opacity: 1;
   transform: none;
 }
 
-/* Animation only runs when JavaScript adds the .js class. */
 .js .reveal {
   opacity: 0;
   transform: translateY(18px);
