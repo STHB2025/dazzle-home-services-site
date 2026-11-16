@@ -43,6 +43,12 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--blue-500);
+  outline-offset: 3px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -72,12 +78,11 @@ a {
 }
 
 .brand-logo {
-  width: 56px;
+  width: 84px;
   height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--blue-100);
-  box-shadow: 0 8px 20px rgba(10, 47, 92, 0.14);
+  flex: 0 0 auto;
+  object-fit: contain;
+  background: var(--white);
 }
 
 .nav-toggle {
@@ -189,7 +194,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.35rem, 10vw, 4.8rem);
+  font-size: clamp(2.25rem, 6vw, 4.2rem);
 }
 
 h2 {
@@ -317,7 +322,8 @@ h3 {
 }
 
 .hero-card img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
+  object-position: center 50%;
 }
 
 .hero-card-text strong {
@@ -399,7 +405,8 @@ h3 {
 }
 
 .about-image img {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
+  object-position: center 35%;
   box-shadow: var(--shadow-soft);
 }
 
@@ -421,7 +428,8 @@ h3 {
   width: 100%;
   aspect-ratio: 3 / 4;
   border-radius: 16px;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--white);
   box-shadow: var(--shadow-soft);
 }
 
@@ -452,7 +460,9 @@ h3 {
 .qr-card img {
   width: min(260px, 100%);
   margin: 0 auto 18px;
-  border-radius: 18px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 8px;
   background: var(--blue-100);
 }
 
@@ -510,10 +520,10 @@ h3 {
 }
 
 .footer-brand img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 102px;
+  height: 68px;
+  flex: 0 0 auto;
+  object-fit: contain;
   background: var(--white);
 }
 
@@ -584,7 +594,7 @@ h3 {
   transform: translateY(0);
 }
 
-@media (min-width: 760px) {
+@media (min-width: 920px) {
   .nav-toggle {
     display: none;
   }
@@ -628,8 +638,12 @@ h3 {
 
 @media (max-width: 480px) {
   .brand-logo {
-    width: 50px;
-    height: 50px;
+    width: 64px;
+    height: 43px;
+  }
+
+  .brand {
+    gap: 8px;
   }
 
   .brand span {
